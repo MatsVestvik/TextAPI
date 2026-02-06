@@ -8,6 +8,16 @@ public class WrapLinesTextCommand extends WrapTextCommand {
 
   @Override
   public String execute(String text) {
-    return "temp";
+    StringBuilder sb = new StringBuilder();
+    String[] lines = text.split("\n");
+
+    for (String line : lines) {
+      sb.append(opening);
+      sb.append(line);
+      sb.append(end);
+      sb.append("\n");
+    }
+
+    return sb.toString();
   }
 }

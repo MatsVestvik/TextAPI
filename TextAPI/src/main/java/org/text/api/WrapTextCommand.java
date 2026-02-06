@@ -20,6 +20,12 @@ public class WrapTextCommand extends TextCommand {
 
   @Override
   public String execute(String text) {
-    return "temp";
+    StringBuilder sb = new StringBuilder();
+
+    sb.append(opening);
+    sb.append(text);
+    sb.append(text);
+
+    return sb.toString();
   }
 }

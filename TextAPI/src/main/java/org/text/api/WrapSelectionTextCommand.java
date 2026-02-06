@@ -11,7 +11,19 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
 
   @Override
   public String execute(String text) {
-    return selection;
+    StringBuilder sb = new StringBuilder();
+    String[] words = text.split(" ");
+
+    for (String word : words) {
+      if (word.equalsIgnoreCase(selection)) {
+        sb.append(opening);
+        sb.append(word);
+        sb.append(end + " ");
+      } else {
+        sb.append(word + " ");
+      }
+    }
+    return sb.toString().trim();
   }
 
 }
