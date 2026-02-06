@@ -1,7 +1,5 @@
 package org.text.api;
 
-import org.text.api.CapitalizeSelectionTextCommand;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -20,6 +18,6 @@ public class CapitalizeSelectionTextCommandTest {
   @DisplayName("positive test")
   void testCapitalization() {
     String result = capitalizeSelectionTextCommand.execute("this is a test");
-    assert("this is a TEST", result, "Should capotilize the selection which is test");
+    assertEquals("this is a Test", result, "Should capitilize the selection which is test");
   }
 }
