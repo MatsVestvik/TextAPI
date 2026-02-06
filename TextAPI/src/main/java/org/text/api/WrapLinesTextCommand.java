@@ -18,6 +18,6 @@ public class WrapLinesTextCommand extends WrapTextCommand {
       sb.append("\n");
     }
 
-    return sb.toString();
+    return sb.toString().trim();
   }
 }

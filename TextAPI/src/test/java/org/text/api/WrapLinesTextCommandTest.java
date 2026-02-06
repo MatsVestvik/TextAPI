@@ -18,7 +18,7 @@ public class WrapLinesTextCommandTest {
   @Test
   @DisplayName("positve")
   void testWrapLines() {
-    String result = wrapLinesTextCommand.execute("this is a text with \na newline character");
-    assertEquals("<p>this is a text with</p> <p>a newline character</p>", result);
+    String result = wrapLinesTextCommand.execute("test\ntest");
+    assertEquals("<p>test</p>\n<p>test</p>", result);
   }
 }

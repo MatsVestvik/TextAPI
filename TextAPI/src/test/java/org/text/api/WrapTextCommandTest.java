@@ -19,6 +19,6 @@ public class WrapTextCommandTest {
   @DisplayName("positive")
   void testWrap() {
     String result = wrapTextCommand.execute("this is a normal string");
-    assertEquals("<p>this is a normal string", result);
+    assertEquals("<p>this is a normal string</p>", result);
   }
 }

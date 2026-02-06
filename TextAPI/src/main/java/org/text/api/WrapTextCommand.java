@@ -24,7 +24,7 @@ public class WrapTextCommand extends TextCommand {
 
     sb.append(opening);
     sb.append(text);
-    sb.append(text);
+    sb.append(end);
 
     return sb.toString();
   }
