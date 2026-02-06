@@ -9,7 +9,7 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
   @Override
   public String execute(String text) {
     StringBuilder sb = new StringBuilder();
-    String[] words = text.split("\\s");
+    String[] words = text.split(" ");
 
     int index = 0;
     boolean found = false;
@@ -25,6 +25,6 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
     for (String word : words) {
       sb.append(word + " ");
     }
-    return sb.toString();
+    return sb.toString().trim();
   }
 }

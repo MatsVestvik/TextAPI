@@ -24,7 +24,7 @@ public class ReplaceTextCommand extends TextCommand {
       throw new IllegalArgumentException();
     }
     StringBuilder sb = new StringBuilder();
-    String[] words = text.split("\\s");
+    String[] words = text.split(" ");
 
     for (String word : words) {
       if (word.equalsIgnoreCase(target)) {
@@ -35,6 +35,6 @@ public class ReplaceTextCommand extends TextCommand {
       }
       sb.append(" ");
     }
-    return sb.toString();
+    return sb.toString().trim();
   }
 }
