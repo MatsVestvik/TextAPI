@@ -4,6 +4,6 @@ public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
 
   @Override
   public String execute(String text) {
-    return "temp";
+    return text.toUpperCase();
   }
 }
