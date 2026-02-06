@@ -8,6 +8,23 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
 
   @Override
   public String execute(String text) {
-    return "temp";
+    StringBuilder sb = new StringBuilder();
+    String[] words = text.split("\\s");
+
+    int index = 0;
+    boolean found = false;
+
+    while (index < words.length && !found) {
+      if (words[index].equalsIgnoreCase(target)) {
+        words[index] = replacement;
+        found = true;
+      }
+      index++;
+    }
+
+    for (String word : words) {
+      sb.append(word + " ");
+    }
+    return sb.toString();
   }
 }
