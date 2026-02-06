@@ -4,9 +4,6 @@ public class CapitalizeTextCommand extends TextCommand {
 
   @Override
   public String execute(String text) {
-    if (text.isEmpty()) {
-      return text;
-    }
-    return text.toUpperCase();
+    return text = text.substring(0, 1).toUpperCase() + text.substring(1);
   }
 }
