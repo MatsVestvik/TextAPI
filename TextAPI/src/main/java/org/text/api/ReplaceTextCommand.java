@@ -20,6 +20,21 @@ public class ReplaceTextCommand extends TextCommand {
 
   @Override
   public String execute(String text) {
-    return "test";
+    if (text == null) {
+      throw new IllegalArgumentException();
+    }
+    StringBuilder sb = new StringBuilder();
+    String[] words = text.split("\\s");
+
+    for (String word : words) {
+      if (word.equalsIgnoreCase(target)) {
+        word = replacement;
+        sb.append(word);
+      } else {
+        sb.append(word);
+      }
+      sb.append(" ");
+    }
+    return sb.toString();
   }
 }
